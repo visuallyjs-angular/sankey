@@ -1,0 +1,11 @@
+<div style="position: relative">
+  <div class="controls-panel">
+    <label class="pivot-label">Pivot:</label>
+    <select class="pivot-select" [value]="pivot()" (change)="onPivotChange($event)">
+      <option value="">No pivot</option>
+      <option value="transitMode">Transit Mode</option>
+      <option value="carrier">Carrier</option>
+    </select>
+  </div>
+  <vjs-sankey-chart url="/dataset.json" [pivot]="pivot()" [options]="options"/>
+</div>
